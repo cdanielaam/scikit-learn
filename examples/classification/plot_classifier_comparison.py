@@ -127,6 +127,7 @@ for ds_cnt, ds in enumerate(datasets):
             Z = clf.decision_function(np.c_[xx.ravel(), yy.ravel()])
         else:
             Z = clf.predict_proba(np.c_[xx.ravel(), yy.ravel()])[:, 1]
+        print(name, score)
 
         # Put the result into a color plot
         Z = Z.reshape(xx.shape)
